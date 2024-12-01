@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saran - Pesona Bandungan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌸 Pesona Bandungan</div>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="produk.html">Destinasi</a></li>
+                <li><a href="saran.html" class="active">Saran</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="saran-section">
+            <h1>Form Saran & Masukan</h1>
+            <form id="saranForm">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="destinasi">Destinasi yang Dikunjungi</label>
+                    <select id="destinasi" name="destinasi">
+                        <option value="">Pilih Destinasi</option>
+                        <option value="gedong-songo">Candi Gedong Songo</option>
+                        <option value="telaga-warna">Telaga Warna</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="saran">Saran dan Masukan</label>
+                    <textarea id="saran" name="saran" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="setuju" name="setuju" required>
+                    <label for="setuju">Saya setuju dengan syarat dan ketentuan</label>
+                </div>
+
+                <button type="submit" class="submit-button">Kirim Saran</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Portal Wisata Bandungan - Ciptakan Kenangan Indah</p>
+        <div class="social-media">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('saranForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih atas saran Anda! 💕');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
